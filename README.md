@@ -10,10 +10,7 @@ OpenGL project which consists of 3D environment, to demonstrate assembly and dis
 see [Code of Conduct](https://github.com/AdarshRevankar/Desktop-Simulator/blob/master/CODE_OF_CONDUCT.md)
 
 ---
-## Demonstration - Youtube
-```https://youtu.be/VInynN3uoLo```
 
----
 ## Snapshot
 
 Instance | Image
@@ -141,13 +138,3 @@ On Code::Blocks (MinGW): add OpenAL include/lib folders in build settings, then 
   4. Textbook for understanding structure of OpenGL - [Computer Graphics With OpenGL - Donald Hearn & Pauline Baker](https://doc.lagout.org/programmation/OpenGL/Computer%20Graphics%20with%20OpenGL%20%284th%20ed.%29%20%5BHearn%2C%20Baker%20%26%20Carithers%202013%5D.pdf).
   
 ---
-
-## Project Report
-> [Project Report](https://github.com/AdarshRevankar/GRAPHICAL-SIMULATION-OF-DESKTOP-AND-ITS-COMPONENTS/files/3331188/Report_GSDC.pdf) with detailed structure of project.
-
----
-
-## Questions
-  Mail / Facebook messages can be done
-  * [Adarsh Revankar](https://www.facebook.com/adarsh.revankar.3) - `adarsh_revankar@live.com`
-  * [Akshaya Ram](https://www.facebook.com/akshaya.muthuraman) - `akshayaram004@gmail.com`
