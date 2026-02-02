@@ -16,6 +16,7 @@
 #include "environment_objects.h"
 #include "env_table.h"
 #include "cpu_cable.h"
+// #include "banners.h" replaced with new Tooltip system
 
 cpu_fan fan_;
 cpu_motherboard motherboard_;
@@ -121,7 +122,10 @@ void drawCPU() {
 	sata_.render();
 	case_.render();
 	
-
+    // Legacy Banner Removed
+	// if (enterPressed) {
+	// 	drawComponentInfo(objIndex);
+	// }
 }
 
 #endif OBJECTS

@@ -9,6 +9,7 @@ class cpu_ramstick {
 	bool objMove = false;
 	void motionHandle();
 public:void render(GLfloat, GLfloat, GLfloat);
+		   point3D getOffset() { return move; }
 };
 
 void cpu_ramstick::motionHandle() {

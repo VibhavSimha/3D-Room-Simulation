@@ -10,6 +10,7 @@ class cpu_psu {
 		bool objMove = false;
 		void motionHandle();
 public:void render();
+	point3D getOffset() { return move; }
 };
 
 void cpu_psu::motionHandle() {

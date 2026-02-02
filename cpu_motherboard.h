@@ -14,6 +14,7 @@ private:GLfloat boardThickness = 0.025;
 		void motionHandle();
 		void draw_components(GLfloat, GLfloat, GLfloat, GLfloat,int);
 public:void render();
+		   point3D getOffset() { return move; }
 };
 
 void cpu_motherboard::motionHandle() {

@@ -10,6 +10,7 @@ class cpu_harddisk {
 
 	void motionHandle();
 public:void render();
+	point3D getOffset() { return move; }
 };
 
 void cpu_harddisk::motionHandle() {

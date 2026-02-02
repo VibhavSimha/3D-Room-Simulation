@@ -58,6 +58,7 @@ private:GLfloat c_center[3] = { 0.0075, 0.0075, 0.0075};
 		void showDescrpiton();
 		void motionHandle();
 public: void render();
+		point3D getOffset() { return move; }
 };
 
 void cpu_fan::showDescrpiton() {

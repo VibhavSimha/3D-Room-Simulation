@@ -9,6 +9,7 @@ class cpu_chipset {
 	bool objMove = false;
 	void motionHandle();
 public:void render();
+	point3D getOffset() { return move; }
 };
 
 void cpu_chipset::motionHandle() {

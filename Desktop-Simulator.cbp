@@ -38,6 +38,7 @@
 			<Add library="freeglut" />
 		</Linker>
 		<Unit filename="bitmap.h" />
+		<Unit filename="banners.h" />
 		<Unit filename="bmpLoader.h" />
 		<Unit filename="cpu_cable.h" />
 		<Unit filename="cpu_case.h" />

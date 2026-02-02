@@ -10,7 +10,7 @@ class cpu_gpu {
 		void lower_render();
 		void motionHandle();
 public: void render();
-		
+		point3D getOffset() { return move; }
 };
 
 void cpu_gpu::motionHandle() {
