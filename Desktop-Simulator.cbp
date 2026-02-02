@@ -54,6 +54,8 @@
 		<Unit filename="light.h" />
 		<Unit filename="audio.cpp" />
 		<Unit filename="audio.h" />
+		<Unit filename="stats.cpp" />
+		<Unit filename="stats.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="motion.h" />
 		<Unit filename="objects.h" />

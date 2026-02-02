@@ -17,6 +17,7 @@ Any improvements made will be accepted, mail the code to : adarshrevankar0123@gm
 #include "bitmap.h"
 #include "light.h"
 #include "audio.h"
+#include "stats.h"
 
 /* TEXTURE HANDLING */
 void loadTexture(GLuint texture, const char* filename) {
@@ -47,6 +48,7 @@ void change_size(int w, int h) {
 	// Update global parameters
 	width = w;
 	hight = h;
+	stats::set_resolution(w, h);
 	// Do reshape
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	float ratio = 0.0f;
@@ -61,6 +63,7 @@ void change_size(int w, int h) {
 
 void renderScene()
 {
+	stats::frame_start();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
 	gluLookAt(x, 5.0f, z,
@@ -73,6 +76,8 @@ void renderScene()
 		{(float)lx, (float)(y - 5.0), (float)lz},
 		{0.0f, 1.0f, 0.0f}
 	);
+	// Save simple context for performance logs.
+	stats::set_frame_context(page, motion_present);
 
 	if (page == 1) {
 		drawGround();
@@ -84,11 +89,14 @@ void renderScene()
 		front_page();
 		progress_wheel();
 	}
+	stats::frame_end();
+	stats::draw_overlay();
 	glutSwapBuffers();
 }
 
 void opengl_init(void) {
 	glEnable(GL_DEPTH_TEST);
+	stats::init();
 	// Optional 3D audio (enabled when built with USE_OPENAL).
 	if (audio::init()) {
 		audio::preload_defaults();

@@ -79,6 +79,32 @@ Desktop View | <img src="https://user-images.githubusercontent.com/48080453/6019
 
 ---
 
+## Runtime Performance Metrics
+
+When you run the simulator, a small overlay in the top-left shows:
+
+- **FPS / avg FPS** – instantaneous and average frames per second.
+- **Frame ms (min / max)** – last frame time in milliseconds, and the min / max since startup (approximate CPU+GPU frame cost).
+- **Resolution / Throughput** – current window resolution and an approximate pixel throughput:
+  $$\text{throughput} \approx \text{width} \times \text{height} \times \text{FPS} \;\text{pixels/second}.$$
+
+These values are computed per-frame in `stats.cpp` using a high-resolution timer and the current window size from `change_size()`.
+
+In addition, each frame is logged to `performance_log.csv` in the working directory with the following columns:
+
+- `frame` – frame index since startup.
+- `time_s` – seconds since app start.
+- `frame_ms` – per-frame latency in milliseconds.
+- `fps`, `avg_fps`, `min_ms`, `max_ms` – instantaneous and aggregate timing stats.
+- `width`, `height` – resolution for that frame.
+- `pixels_per_frame`, `pixels_per_second` – approximate rendering throughput.
+- `page` – 0 = front page/loading, 1 = main 3D scene.
+- `motion_present` – 1 if free camera motion is enabled, 0 otherwise.
+
+You can load this CSV into Excel, Python, or any plotting tool to compute additional statistics (e.g., 95th-percentile latency, FPS distributions, or comparisons between resolutions and camera modes).
+
+---
+
 ## Optional: Interactive 3D Sound (OpenAL)
 
 This repo includes an optional 3D audio module (OpenAL). It is **disabled by default** so the project still builds without extra dependencies.
