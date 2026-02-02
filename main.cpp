@@ -16,10 +16,12 @@ Any improvements made will be accepted, mail the code to : adarshrevankar0123@gm
 #include "bitmap.h"
 #include "light.h"
 #include "tooltip.h"
+#include "checklist.h"
 #include "stats.h"
 
 // Initialize TooltipSystem
 TooltipSystem tooltipSystem;
+ChecklistSystem checklistSystem;
 int mouseGlobalX = 0;
 int mouseGlobalY = 0;
 
@@ -142,6 +144,9 @@ void renderScene()
 
 		// Draw tooltips on top
 		tooltipSystem.draw((float)x, 5.0f, (float)z);
+		
+		// Draw Checklist HUD
+		checklistSystem.draw(objIndex, width, hight);
 	}
 	else if(page == 0) {
 		front_page();
