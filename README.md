@@ -1,7 +1,4 @@
 # Desktop Simulator 
-[![Inline docs](http://inch-ci.org/github/AdarshRevankar/Desktop-Simulator.svg?branch=master)](http://inch-ci.org/github/AdarshRevankar/Desktop-Simulator)
-[![Build Status](https://travis-ci.org/AdarshRevankar/Desktop-Simulator.png?branch=master)](https://travis-ci.org/AdarshRevankar/Desktop-Simulator)
-[![HitCount](http://hits.dwyl.com/AdarshRevankar/Desktop-Simulator.svg)](http://hits.dwyl.com/AdarshRevankar/Desktop-Simulator)
 
 OpenGL project which consists of 3D environment, to demonstrate assembly and disassembly of desktop parts. This uses basic glut library to construct a 3D Scene of CPU and it's components.
 
